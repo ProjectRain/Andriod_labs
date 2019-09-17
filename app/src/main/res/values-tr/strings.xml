@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Andriod labs</string>
+    <string name="hello_message">!</string>
+    <string name="ButtonText">I\’m a button</string>
+    <string name="rob">Fiiri aniga GUI</string>
+    <string name="low">Demi / daar</string>
+    <string name="typehere">Ku qor halkan</string>
+    <string name="robleh">Halkan guji</string>
+    <string name="Check">Hubi tan!</string>
+</resources>

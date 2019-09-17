@@ -2,4 +2,9 @@
     <string name="app_name">Andriod labs</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\’m a button</string>
+    <string name="rob">Look at my GUI</string>
+    <string name="low">Switch Off/On</string>
+    <string name="typehere">Type here</string>
+    <string name="robleh">Click here</string>
+    <string name="Check">Check this out!</string>
 </resources>

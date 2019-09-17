@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="fill"
+        android:orientation="horizontal"
+        android:text="@string/rob"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:gravity="fill"
+            android:orientation="horizontal"
+            android:text="@string/robleh" >
+
+        </Button>
+
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:orientation="horizontal"
+            android:text="@string/Check">
+        </CheckBox>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="fill"
+            android:src="@drawable/flag" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:text="@string/low" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/input"
+        android:hint="@string/typehere"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="fill"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>
