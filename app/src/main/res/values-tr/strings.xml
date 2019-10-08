@@ -8,4 +8,22 @@
     <string name="typehere">Ku qor halkan</string>
     <string name="robleh">Halkan guji</string>
     <string name="Check">Hubi tan!</string>
+
+
+    <string name="email">E-posta adresinizi giriniz:</string>
+    <string name="emailT">Buraya e-posta yazın</string>
+    <string name="password">Şifrenizi giriniz:</string>
+    <string name="login">oturum aç</string>
+    <string name="profile">Senin profil</string>
+    <string name="name">Adınız:</string>
+    <string name="emailA">E-posta adresiniz:></string>
+    <string name="nameE">Adınızı giriniz</string>
+    <string name="enterE">E-postanızı giriniz</string>
+    <string name="picture">Senin resmin</string>
+    <string name="click">Fotoğraf çekmek için yukarıdaki düğmeye tıklayın</string>
+
+    <string name="send">Gönder</string>
+    <string name="receive">Teslim almak</string>
+    <string name="go">Sohbete git</string>
+
 </resources>
