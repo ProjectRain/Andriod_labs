@@ -17,6 +17,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     ImageButton squareButton;
     Button chatButton;
+    Button weatherForecast;
     EditText emailEditText;
     ImageButton mImageButton;
 
@@ -31,8 +32,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         squareButton = findViewById(R.id.squareButton);
         chatButton = findViewById(R.id.chatButton);
         mImageButton = findViewById(R.id.squareButton);
+        weatherForecast = findViewById(R.id.weatherForecast);
         squareButton.setOnClickListener(this);
         chatButton.setOnClickListener(this);
+        weatherForecast.setOnClickListener(this);
 
     }
     @Override
@@ -48,6 +51,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.chatButton:
                 Intent chatRoomActivityIntent = new Intent(getApplicationContext(), ChatRoomActivity.class);
                 startActivity(chatRoomActivityIntent);
+                break;
+
+            case R.id.weatherForecast:
+                Intent weatherForecastIntent = new Intent(getApplicationContext(), WeatherForecast.class);
+                startActivity(weatherForecastIntent);
                 break;
 
         }
