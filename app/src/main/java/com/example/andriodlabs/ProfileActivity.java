@@ -12,54 +12,63 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
+    public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
 
-    public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
-    ImageButton squareButton;
-    Button chatButton;
-    Button weatherForecast;
-    EditText emailEditText;
-    ImageButton mImageButton;
+        public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
+        ImageButton squareButton;
+        Button chatButton;
+        Button weatherForecast;
+        Button toolBar;
+        EditText emailEditText;
+        ImageButton mImageButton;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.e(ACTIVITY_NAME, "In function:" + "onCreate");
-        setContentView(R.layout.profile_activity);
-        Intent intent = getIntent();
-        emailEditText = findViewById(R.id.email);
-        emailEditText.setText(intent.getStringExtra("email"));
-        squareButton = findViewById(R.id.squareButton);
-        chatButton = findViewById(R.id.chatButton);
-        mImageButton = findViewById(R.id.squareButton);
-        weatherForecast = findViewById(R.id.weatherForecast);
-        squareButton.setOnClickListener(this);
-        chatButton.setOnClickListener(this);
-        weatherForecast.setOnClickListener(this);
-
-    }
-    @Override
-    public void onClick(View v){
-
-        switch (v.getId()) {
-
-            case R.id.squareButton:
-                dispatchTakePictureIntent();
-
-                break;
-
-            case R.id.chatButton:
-                Intent chatRoomActivityIntent = new Intent(getApplicationContext(), ChatRoomActivity.class);
-                startActivity(chatRoomActivityIntent);
-                break;
-
-            case R.id.weatherForecast:
-                Intent weatherForecastIntent = new Intent(getApplicationContext(), WeatherForecast.class);
-                startActivity(weatherForecastIntent);
-                break;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            Log.e(ACTIVITY_NAME, "In function:" + "onCreate");
+            setContentView(R.layout.profile_activity);
+            Intent intent = getIntent();
+            emailEditText = findViewById(R.id.email);
+            emailEditText.setText(intent.getStringExtra("email"));
+            squareButton = findViewById(R.id.squareButton);
+            chatButton = findViewById(R.id.chatButton);
+            mImageButton = findViewById(R.id.squareButton);
+            weatherForecast = findViewById(R.id.weatherForecast);
+            toolBar = findViewById(R.id.toolBar);
+            squareButton.setOnClickListener(this);
+            chatButton.setOnClickListener(this);
+            weatherForecast.setOnClickListener(this);
+            toolBar.setOnClickListener(this);
 
         }
-    }
+        @Override
+        public void onClick(View v){
+
+            switch (v.getId()) {
+
+                case R.id.squareButton:
+                    dispatchTakePictureIntent();
+
+                    break;
+
+                case R.id.chatButton:
+                    Intent chatRoomActivityIntent = new Intent(getApplicationContext(), ChatRoomActivity.class);
+                    startActivity(chatRoomActivityIntent);
+                    break;
+
+                case R.id.weatherForecast:
+                    Intent weatherForecastIntent = new Intent(getApplicationContext(), WeatherForecast.class);
+                    startActivity(weatherForecastIntent);
+                    break;
+
+                case R.id.toolBar:
+                    Intent toolBarIntent = new Intent(getApplicationContext(), TestToolBar.class);
+                    startActivity(toolBarIntent);
+                    break;
+
+
+            }
+        }
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private void dispatchTakePictureIntent() {

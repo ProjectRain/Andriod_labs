@@ -22,6 +22,11 @@
     <string name="picture">Senin resmin</string>
     <string name="click">Fotoğraf çekmek için yukarıdaki düğmeye tıklayın</string>
 
+    <string name="current">Şuanki sıcaklık</string>
+    <string name="min">Min Sıcaklık</string>
+    <string name="max">Maksimum sıcaklık</string>
+    <string name="uv">UV derecesi</string>
+
     <string name="send">Gönder</string>
     <string name="receive">Teslim almak</string>
     <string name="go">Sohbete git</string>

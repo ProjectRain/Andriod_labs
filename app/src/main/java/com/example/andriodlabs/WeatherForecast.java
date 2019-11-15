@@ -67,6 +67,7 @@ public class WeatherForecast extends AppCompatActivity {
 
         @Override                       //Type 1
         protected String doInBackground(String... strings) {
+            publishProgress(25);
             String ret = null;
             String queryURL = "http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=7e943c97096a9784391a981c4d878b22&mode=xml&units=metric";
 
@@ -81,6 +82,7 @@ public class WeatherForecast extends AppCompatActivity {
                 XmlPullParser xpp = factory.newPullParser();
                 xpp.setInput(inStream, "UTF-8");
 
+                publishProgress(50);
                 //Iterate over the XML tags:
                 int EVENT_TYPE;         //While not the end of the document:
                 while ((EVENT_TYPE = xpp.getEventType()) != XmlPullParser.END_DOCUMENT) {
@@ -89,18 +91,15 @@ public class WeatherForecast extends AppCompatActivity {
                             String tagName = xpp.getName(); // What kind of tag?
                             if (tagName.equals("temperature")) {
                                 currentTemp = Float.parseFloat(xpp.getAttributeValue(null, "value"));
-                                publishProgress(25);
                                 minTemp = Float.parseFloat(xpp.getAttributeValue(null, "min"));
-                                publishProgress(50);
                                 maxTemp = Float.parseFloat(xpp.getAttributeValue(null, "max"));
-                                publishProgress(75);
                             }
                             if (tagName.equals("weather")) {
                                 weather = xpp.getAttributeValue(null,"icon");
                                 String fileName = weather + ".png";
 
                                 Log.i("Search file", "Looking for file: " + fileName);
-                                if(!fileExistance(fileName)) {
+                                if(!fileExistence(fileName)) {
                                     Log.i("Search file", "Not found locally, downloading: " + fileName);
                                     queryURL = "http://openweathermap.org/img/w/" + fileName;
                                     url = new URL(queryURL);
@@ -121,7 +120,7 @@ public class WeatherForecast extends AppCompatActivity {
                                     catch (FileNotFoundException e) {    e.printStackTrace();  }
                                     bitmap = BitmapFactory.decodeStream(fis);
                                 }
-                                publishProgress(100);
+                                publishProgress(75);
 
                                 queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=7e943c97096a9784391a981c4d878b22&lat=45.348945&lon=-75.759389";
                                 url = new URL(queryURL);
@@ -159,11 +158,12 @@ public class WeatherForecast extends AppCompatActivity {
             }
 
             //What is returned here will be passed as a parameter to onPostExecute:
+            publishProgress(100);
             return ret;
         }
 
-        public boolean fileExistance(String fname){
-            File file = getBaseContext().getFileStreamPath(fname);
+        public boolean fileExistence(String fName){
+            File file = getBaseContext().getFileStreamPath(fName);
             return file.exists();
         }
 

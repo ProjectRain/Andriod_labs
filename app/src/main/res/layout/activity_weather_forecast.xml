@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:text="Current Temperature" />
+        android:text="@string/current" />
     <TextView
         android:id="@+id/minWeather"
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:text="Min Temperature" />
+        android:text="@string/min" />
     <TextView
         android:id="@+id/maxWeather"
         android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:text="Max Temperature" />
+        android:text="@string/max" />
 
     <TextView
         android:id="@+id/uvRating"
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:text="UV Rating" />
+        android:text="@string/uv" />
 
 
     <ProgressBar
