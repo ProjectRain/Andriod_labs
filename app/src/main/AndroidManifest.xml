@@ -13,6 +13,8 @@
         <activity android:name=".TestToolBar" />
         <activity android:name=".ChatRoomActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".DetailFragment" />
+        <activity android:name=".EmptyActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

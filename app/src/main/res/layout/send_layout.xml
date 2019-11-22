@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants">
 
     <ImageButton
         android:id="@+id/receiveImage"
@@ -17,6 +18,8 @@
         android:layout_height="wrap_content"
         android:background="@null"
         android:layout_toRightOf="@+id/receiveImage"
-        android:hint="" />
+        android:hint=""
+        android:textIsSelectable="false"
+        />
 
 </RelativeLayout>

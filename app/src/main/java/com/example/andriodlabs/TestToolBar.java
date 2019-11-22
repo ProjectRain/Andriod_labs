@@ -18,7 +18,8 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.snackbar.Snackbar;
 
 public class TestToolBar extends AppCompatActivity {
-    String message = "This is the initial message";
+    String message = "Good afternoon";
+    String message1 = "You clicked on the overflow menu";
     Toolbar tBar;
 
     @Override
@@ -64,10 +65,12 @@ public class TestToolBar extends AppCompatActivity {
                 editMessage();
                 break;
             case R.id.snack_main_setting:
-                Snackbar sb = Snackbar.make(tBar, "Clicking go back will exit", Snackbar.LENGTH_LONG)
+                Snackbar sb = Snackbar.make(tBar, "Go back?", Snackbar.LENGTH_LONG)
                         .setAction("Go Back?", e -> this.finish())
                         .setDuration(10000);
                 sb.show();
+            case R.id.overflow_main_setting:
+                Toast.makeText(this, message1, Toast.LENGTH_LONG).show();
                 break;
         }
         return true;
@@ -81,7 +84,7 @@ public class TestToolBar extends AppCompatActivity {
 //        btn.setOnClickListener( clk -> et.setText("You clicked my button!"));
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Change message")
+        builder.setMessage("")
                 .setPositiveButton("Positive", (dialog, id) -> {
                     // What to do on Accept
                     message = et.getText().toString();
